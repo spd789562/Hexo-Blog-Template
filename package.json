@@ -1,9 +1,9 @@
 {
-  "name": "Les-Esther-Blog",
+  "name": "les-esther-blog",
   "version": "1.0.0",
   "private": true,
   "hexo": {
-    "version": "3.2.2"
+    "version": "3.3.1"
   },
   "dependencies": {
     "cheerio": "^0.22.0",
