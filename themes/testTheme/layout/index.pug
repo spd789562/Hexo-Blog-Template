@@ -1,0 +1,7 @@
+extends ./_partial/layout.pug
+block content
+  each post in page.posts.data
+    h2=post.title
+    div !{post.excerpt}
+    div
+      a(href=post.path) read more
