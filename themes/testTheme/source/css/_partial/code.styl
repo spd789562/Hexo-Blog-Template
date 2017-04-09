@@ -1,0 +1,27 @@
+@import './font.styl'
+
+.highlight
+  position relative
+  .gutter
+    color #777
+    padding-left 1em
+    .line
+      line-height 1.5em
+  .code
+    padding-left .5em
+    .line
+      line-height 1.5em
+  &.bash
+    .gutter
+      display none
+  .tag
+    position absolute
+    right 1rem
+    top .5rem
+    font-size 1.2rem
+  code
+  pre
+  kbd
+  samp
+    my-fonts()
+    font-size 1.1rem

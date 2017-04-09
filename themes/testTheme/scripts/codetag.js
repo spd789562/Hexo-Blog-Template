@@ -1,15 +1,25 @@
 'use strict';
-var cheerio = require('cheerio'); 
+var cheerio = require('cheerio')
 
 function codetag(source) {
-    var LZ= cheerio.load(source, {
-        decodeEntities: false
-    });
-    //遍历所有 img 标签，添加data-original属性
-    LZ('.highlight').each(function(index, element) {
-      
-    });
-    return LZ.html();
+  var $= cheerio.load(source, {
+    decodeEntities: false
+  })
+  $('.highlight').each(function(index, element) {
+//   let $(element) = $(element)
+  let classList = $(element).attr('class').split(' '),
+    className,
+    tagElement
+  //若長度大於等於2代表markdown撰寫時有標註語言
+  console.log(classList)
+  if(classList.length >= 2)
+    //取出第二個元素
+    className = classList[1]
+    //建立元素
+    tagElement = '<span class="tag">' + className + '</span>'
+    //插入codeblock中
+    $(element).append(tagElement)
+  });
+  return $.html();
 }
-//在渲染之前，更改 img 标签
-hexo.extend.filter.register('after_render:html', codetag);
+hexo.extend.filter.register('after_render:html', codetag)

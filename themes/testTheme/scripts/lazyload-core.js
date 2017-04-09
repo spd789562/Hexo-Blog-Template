@@ -11,7 +11,6 @@ function lazyloadImg(source) {
         if (oldsrc) {
             LZ(element).removeAttr('src');
             LZ(element).attr({
-
                  'data-original': oldsrc
             });
 

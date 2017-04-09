@@ -1,0 +1,20 @@
+sm = 576px
+md = 768px
+lg = 992px
+xl = 1200px
+
+media(width)
+  @media screen and (min-width: width * 1px)
+    {block}
+
+sm-size()
+  media(sm)
+
+md-size()
+  media(md)
+
+lg-size()
+  media(lg)
+  
+xl-size()
+  media(xl)
