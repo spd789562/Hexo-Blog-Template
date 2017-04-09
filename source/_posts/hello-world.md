@@ -1,5 +1,7 @@
 ---
 title: Hello World
+tags: 
+- hexo
 ---
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 ![img](https://i.imgur.com/CKit9IZ.jpg)
@@ -34,6 +36,15 @@ More info: [Generating](https://hexo.io/docs/generating.html)
 
 ``` bash
 $ hexo deploy
+```
+#Test Code
+
+``` javascript
+var c87 = 87
+c87 = '87'
+function c88() {
+  return c87
+}
 ```
 
 More info: [Deployment](https://hexo.io/docs/deployment.html)

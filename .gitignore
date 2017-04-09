@@ -7,3 +7,4 @@ public/
 .deploy*/
 .ds_store
 themes/landscape
+themes/hexo-theme-hueman

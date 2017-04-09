@@ -1,2 +1,17 @@
 @import 'nib'
+@import './_highlight/atom-one-dark.styl'
+
+.highlight
+  .gutter
+    color #777
+    padding-left 1em
+    .line
+      line-height 1.5em
+  .code
+    padding-left .5em
+    .line
+      line-height 1.5em
+  &.bash
+    .gutter
+      display none
 normalize-css()
