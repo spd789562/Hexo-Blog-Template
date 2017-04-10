@@ -1,2 +1,23 @@
-.main-content
-  
+.container
+  .sidebar
+    .sidebar-photo
+      input#sidebar-switch.sidebar-photo-switch(type="checkbox")
+      label.sidebar-photo-center(for="sidebar-switch")
+      .sidebar-photo__left
+      .sidebar-photo__right
+    .sidebar-author-title Esther & Les
+    .sidebar-link-list
+      .sidebat-link-item
+        a 關於Esther
+      .sidebat-link-item
+        a 關於Les
+      .sidebat-link-item
+        a 技術筆記
+      .sidebat-link-item
+        a 旅遊札記
+      .sidebat-link-item
+        a 生活分享
+      .sidebat-link-item
+        a 友站連結
+  .main-content
+      | !{page.content} 

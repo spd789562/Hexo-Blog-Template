@@ -2,7 +2,7 @@
 var cheerio = require('cheerio')
 
 function codetag(source) {
-  var $= cheerio.load(source, {
+  var $ = cheerio.load(source, {
     decodeEntities: false
   })
   $('.highlight').each(function(index, element) {
@@ -11,7 +11,6 @@ function codetag(source) {
     className,
     tagElement
   //若長度大於等於2代表markdown撰寫時有標註語言
-  console.log(classList)
   if(classList.length >= 2)
     //取出第二個元素
     className = classList[1]
