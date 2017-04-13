@@ -4,17 +4,18 @@ lg = 992px
 xl = 1200px
 
 media(width)
-  @media screen and (min-width: width * 1px)
+  @media screen and (max-width: width * 1px)
     {block}
 
 sm-size()
-  media(sm)
-
+  +media(sm)
+    {block}
 md-size()
-  media(md)
-
+  +media(md)
+    {block}
 lg-size()
-  media(lg)
-  
+  +media(lg)
+    {block}
 xl-size()
-  media(xl)
+  +media(xl)
+    {block}
