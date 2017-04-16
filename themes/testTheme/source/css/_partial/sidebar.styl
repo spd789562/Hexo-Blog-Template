@@ -7,6 +7,9 @@
   height 100%
   width 300px
   padding 1rem
+  box-shadow 0 0 5px #333
+  background-image linear-gradient(#64D4CF 22rem, transparent 22rem)
+  transition transform ease
   +sm-size()
     transform translateX(-300px)
   &-photo
@@ -52,7 +55,8 @@
       &__right
         overflow hidden
         border-radius 50%
-        border 5px solid #aaa
+        border 5px solid #FFF
+        box-shadow inset 0 0 15px 3px #333
         transition:
           transform .5s cubic-bezier(0.39,-0.29, 0.23, 1.46),
           opacity .5s,
@@ -60,7 +64,9 @@
         img
           transition .87s linear
         &:hover
-          box-shadow 0 0 20px #ecd98b
+          box-shadow:
+            inset 0 0 10px 1px #ababab,
+            0 0 20px 2px #cdcdcd
           img
             transform scale(1.2)
       &__group
@@ -92,4 +98,13 @@
     margin-top 4rem
     text-align center
     font-size 2rem
-    color #dedede
+    color #FFF
+  &-link
+    &-list
+      margin-top 4rem
+      padding 2rem
+      color #64D4CF
+      font-size 1.5rem
+    &-item
+      margin-bottom .6rem
+      padding-left 1rem
