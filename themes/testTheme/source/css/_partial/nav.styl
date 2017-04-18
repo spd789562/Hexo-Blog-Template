@@ -1,0 +1,53 @@
+.nav-bar
+  position fixed
+  height 60px
+  width 100%
+  display none
+  z-index 9
+  background-color #fff
+  box-shadow 0 0 10px #666
+  clearfix()
+  +md-size()
+    display block
+  &-switch
+    display none
+    &:checked
+      & ~ .sidebar
+        transform translateX(0)
+      & ~ ^[0]-modal
+        visibility visible
+        opacity 1
+      & ~ .main-content
+        filter blur(5px)
+  &-btn
+    position relative
+    display block
+    size(60px)
+    float left
+    line-height 60px
+    text-align center
+    font-size 2.5rem
+    font-weight bolder
+    &:before
+      content: '☰'
+  &-title
+    float left
+    line-height 60px
+    position absolute
+    left 0
+    right 0
+    margin-left auto
+    margin-right auto
+    text-align center
+  &-modal
+    position fixed
+    left 0
+    right 0
+    top 0
+    bottom 0
+    height 100vh
+    visibility hidden
+    background-color rgba(0,0,0,.2)
+    opacity 0
+    transition opacity .5s ease
+    z-index 7

@@ -8,9 +8,10 @@
   width 300px
   padding 1rem
   box-shadow 0 0 5px #333
-  background-image linear-gradient(#64D4CF 22rem, transparent 22rem)
-  transition transform ease
-  +sm-size()
+  background-image linear-gradient(#64D4CF 22rem, #FFF 22rem)
+  transition transform .5s ease
+  z-index 8
+  +md-size()
     transform translateX(-300px)
   &-photo
     position relative
