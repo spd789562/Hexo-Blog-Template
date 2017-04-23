@@ -1,10 +1,11 @@
 .nav-bar
   position fixed
-  height 60px
+  height $nav-bar-height
   width 100%
   display none
   z-index 9
-  background-color #fff
+  background-color $nav-bar-background
+  color $nav-bar-font-color
   box-shadow 0 0 10px #666
   clearfix()
   +md-size()
@@ -13,10 +14,19 @@
     display none
     &:checked
       & ~ .sidebar
+        box-shadow 0 0 5px #333
         transform translateX(0)
       & ~ ^[0]-modal
         visibility visible
         opacity 1
+      & ~ ^[0]
+        & ^[0]
+          &-btn
+            &:before
+              opacity 0
+            &:after
+              opacity 1
+              transform rotateZ(0deg)
       & ~ .main-content
         filter blur(5px)
   &-btn
@@ -24,21 +34,35 @@
     display block
     size(60px)
     float left
-    line-height 60px
+    line-height $nav-bar-height
     text-align center
     font-size 2.5rem
     font-weight bolder
     &:before
-      content: '☰'
+    &:after
+      position absolute
+      left 0
+      right 0
+      top 0
+      bottom 0
+      transition all .3s ease
+    &:before
+      content '☰'
+    &:after
+      opacity 0
+      content '‹'
+      font-size 4rem
+      transform rotate(-90deg)
   &-title
     float left
-    line-height 60px
+    line-height $nav-bar-height
     position absolute
     left 0
     right 0
     margin-left auto
     margin-right auto
     text-align center
+    font-size $nav-bar-font-size
   &-modal
     position fixed
     left 0
