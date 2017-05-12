@@ -4,11 +4,13 @@ img
 .main
   &-content
     position absolute
-    left 300px
+    left 0
     right 0
     margin auto
     max-width 770px
     padding 15px
-    padding-top  $nav-bar-height
+    margin-top $nav-bar-height
+    font-size $main-font-size
     +md-size()
-      left 0
+      left $sidebar-width
+      margin-top 0

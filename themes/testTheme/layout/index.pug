@@ -1,11 +1,8 @@
 extends ./_partial/layout.pug
 block content
-  .container
-    include ./_partial/nav.pug
-    include ./_partial/sidebar.pug
-    main.main-content 
-      each post in page.posts.data
-        h2=post.title
-        div !{post.excerpt}
-        div
-          a(href=post.path) read more
+  main.main-content 
+    each post in page.posts.data
+      h2=post.title
+      div !{post.excerpt}
+      div
+        a(href=post.path) read more

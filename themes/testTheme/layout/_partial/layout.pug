@@ -3,5 +3,9 @@ html(lang="zh-cn")
   head
     include ./head.pug
   body
-    block content
-    include ./foot.pug
+    .container
+      include ./nav.pug
+      include ./sidebar.pug
+      include ./header.pug
+      block content
+      include ./foot.pug

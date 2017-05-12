@@ -6,14 +6,16 @@
   top 0
   height 100%
   width 300px
-  padding 1rem
+  padding .5rem
   box-shadow 0 0 0 transparent
   background-image linear-gradient($sidebar-background 22rem, #FFF 22rem)
   transition transform .5s ease
+  transform translateX(-1 * $sidebar-width)
   z-index 8
   +md-size()
-    padding .5rem
-    transform translateX(-300px)
+    padding 1rem
+    transform translateX(0px)
+    box-shadow 0 0 5px #333
   &-photo
     position relative
     &-switch

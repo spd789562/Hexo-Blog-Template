@@ -2,14 +2,14 @@
   position fixed
   height $nav-bar-height
   width 100%
-  display none
+  display block
   z-index 9
   background-color $nav-bar-background
   color $nav-bar-font-color
   box-shadow 0 0 10px #666
   clearfix()
   +md-size()
-    display block
+    display none
   &-switch
     display none
     &:checked
