@@ -6,6 +6,7 @@ html(lang="zh-cn")
     .container
       include ./nav.pug
       include ./sidebar.pug
-      include ./header.pug
-      block content
-      include ./foot.pug
+      session
+        include ./header.pug
+        block content
+        include ./foot.pug
